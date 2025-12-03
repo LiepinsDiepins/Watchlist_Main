@@ -1,4 +1,3 @@
-// DOM Elements
 const searchBtn = document.getElementById('searchBtn');
 const searchBtnMain = document.getElementById('searchBtnMain');
 const movieInput = document.getElementById('movieInput');
@@ -11,7 +10,6 @@ const cartoonMoviesGrid = document.getElementById('cartoonMovies');
 const actionMoviesGrid = document.getElementById('actionMovies');
 const scifiMoviesGrid = document.getElementById('scifiMovies');
 
-// Movie Collections
 const popularMovies = [
     'Avengers: Endgame', 'Spider-Man: No Way Home', 'The Batman',
     'Top Gun: Maverick', 'Black Panther', 'John Wick',
@@ -55,7 +53,6 @@ const scifiMovies = [
     'Edge of Tomorrow', 'Tenet', 'Inception', 'The Terminator', 'Back to the Future'
 ];
 
-// Event Listeners
 searchBtn.addEventListener('click', handleSearch);
 searchBtnMain.addEventListener('click', handleSearch);
 movieInput.addEventListener('keypress', (e) => {
@@ -65,7 +62,6 @@ movieInputMain.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') handleSearch();
 });
 
-// Initialize app when DOM loads
 document.addEventListener('DOMContentLoaded', initializeApp);
 
 async function initializeApp() {
@@ -298,7 +294,6 @@ function getPlaceholderImage(title) {
     return `https://via.placeholder.com/300x450/${color}/10B981?text=${encodeURIComponent(title)}`;
 }
 
-// Add search button loading animation
 [searchBtn, searchBtnMain].forEach(btn => {
     btn.addEventListener('click', function() {
         const searchInput = movieInputMain || movieInput;
@@ -315,7 +310,6 @@ function getPlaceholderImage(title) {
     });
 });
 
-// Auto-focus main search input on page load
 window.addEventListener('load', () => {
     movieInputMain.focus();
 });
