@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SearchFlix - Stream Unlimited Films</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Custom Green Header -->
+    <header class="hero-header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-play-circle"></i>
+                <span>SEARCHFLIX</span>
+            </div>
+            <div class="nav-center">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">Series</a>
+                <a href="#" class="nav-link">Films</a>
+                <a href="#" class="nav-link">New</a>
+                <a href="#" class="nav-link">My List</a>
+            </div>
+            <div class="nav-search">
+                <div class="search-container-nav">
+                    <input type="text" id="movieInput" placeholder="Search movies...">
+                    <button id="searchBtn" class="search-btn-nav">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <i class="fas fa-bell"></i>
+                <div class="user-menu">
+                    <img src="https://ui-avatars.com/api/?name=User&background=10B981&color=fff" alt="User">
+                </div>
+            </div>
+        </nav>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Endless Entertainment Awaits</h1>
+                <p class="hero-subtitle">Discover movies and shows from around the world</p>
+                
+                <div class="search-hero-main">
+                    <div class="search-container-main">
+                        <input type="text" id="movieInputMain" placeholder="What do you want to watch today?">
+                        <button id="searchBtnMain" class="cta-button">
+                            <i class="fas fa-search"></i>
+                            Find Movies
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gradient-overlay"></div>
+    </header>
+
+    <main class="main-content">
+        <!-- Continue Watching -->
+        <section class="content-row featured-row">
+            <div class="row-header">
+                <h2>Continue Watching</h2>
+            </div>
+            <div class="movies-scroll-wrapper">
+                <button class="scroll-btn left-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="movies-scroll-container">
+                    <div id="randomMovies" class="movies-scroll"></div>
+                </div>
+                <button class="scroll-btn right-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Trending Now -->
+        <section class="content-row">
+            <div class="row-header">
+                <h2>Trending Now</h2>
+            </div>
+            <div class="movies-scroll-wrapper">
+                <button class="scroll-btn left-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="movies-scroll-container">
+                    <div id="trendingMovies" class="movies-scroll"></div>
+                </div>
+                <button class="scroll-btn right-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Action Movies -->
+        <section class="content-row">
+            <div class="row-header">
+                <h2>Action & Adventure</h2>
+            </div>
+            <div class="movies-scroll-wrapper">
+                <button class="scroll-btn left-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="movies-scroll-container">
+                    <div id="actionMovies" class="movies-scroll"></div>
+                </div>
+                <button class="scroll-btn right-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Family & Cartoons -->
+        <section class="content-row">
+            <div class="row-header">
+                <h2>Family & Animation</h2>
+            </div>
+            <div class="movies-scroll-wrapper">
+                <button class="scroll-btn left-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="movies-scroll-container">
+                    <div id="cartoonMovies" class="movies-scroll"></div>
+                </div>
+                <button class="scroll-btn right-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Sci-Fi Section -->
+        <section class="content-row">
+            <div class="row-header">
+                <h2>Sci-Fi & Fantasy</h2>
+            </div>
+            <div class="movies-scroll-wrapper">
+                <button class="scroll-btn left-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="movies-scroll-container">
+                    <div id="scifiMovies" class="movies-scroll"></div>
+                </div>
+                <button class="scroll-btn right-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Car Movies Section -->
+        <section class="content-row">
+            <div class="row-header">
+                <h2>Speed & Thrills</h2>
+            </div>
+            <div class="movies-scroll-wrapper">
+                <button class="scroll-btn left-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="movies-scroll-container">
+                    <div id="carMovies" class="movies-scroll"></div>
+                </div>
+                <button class="scroll-btn right-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Search Results -->
+        <section id="movieResults" class="results-container">
+            <!-- Results appear here -->
+        </section>
+    </main>
+
+    <!-- Enhanced Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <i class="fas fa-play-circle"></i>
+                    <span>SEARCHFLIX</span>
+                </div>
+                <p class="footer-tagline">Your gateway to endless entertainment</p>
+                
+                <div class="footer-cta">
+                    <button class="subscribe-btn large">
+                        <i class="fas fa-crown"></i>
+                        Start Your Free Trial
+                    </button>
+                </div>
+            </div>
+            
+            <div class="footer-links-grid">
+                <div class="footer-column">
+                    <h3>Browse</h3>
+                    <a href="#">Home</a>
+                    <a href="#">TV Series</a>
+                    <a href="#">Movies</a>
+                    <a href="#">New Releases</a>
+                    <a href="#">Popular</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Account</h3>
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Subscription</a>
+                    <a href="#">Help Center</a>
+                    <a href="#">Sign Out</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Press</a>
+                    <a href="#">Legal</a>
+                    <a href="#">Contact</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Features</h3>
+                    <a href="#">4K Streaming</a>
+                    <a href="#">Download & Watch</a>
+                    <a href="#">Multiple Profiles</a>
+                    <a href="#">Kids Mode</a>
+                    <a href="#">Gift Cards</a>
+                </div>
+            </div>
+            
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Preferences</a>
+                    <a href="#">Corporate Information</a>
+                </div>
+                <p class="copyright">&copy; 2024 SearchFlix. All entertainment, all the time.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

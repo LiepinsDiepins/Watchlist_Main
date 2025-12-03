@@ -3,9 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Search for movies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-play-circle"></i>
+                <span>SearchFlix</span>
+            </div>
+            <div class="nav-center">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link active">Films</a>
+                <a href="#" class="nav-link active">Movies</a>
+                <a href="#" class="nav-link active">About</a>
+                <a href="#" class="nav-link active">History</a>
+            </div>
+            <div class="nav-search">
+                <div class="search-container-nav">
+                    <input type="text" id="movieInput" placeholder="Search your favorites..">
+                    <button id="searchBtn" class="search-btn-nav">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <i class="fas fa-bell"></i>
+                <div class="user-menu">US</div>
+            </div>
+        </nav>
+        
+        <div class="top-main-content">
+            <div class="main-text">
+                <h1 class="main-title">Endless Entertainment Awaits</h1>
+                <p class="main-subtitle">Discover movies and shows from around the world</p>
+
+                <div class="search-main">
+                    <div class="search-container-main">
+                        <input type="text" id="movieInputMain" placeholder="What do you want to watch today?">
+                        <button id="searchBtnMain" class="cta-button">
+                            <i class="fas fa-search"></i>
+                            Find movies
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gradient-overlay"></div>
+    </header>
+
+
+
+        <div class="Main-section">
+
+        <div class="random-movies-section">
+            <h2> Some Popular Movies You Might Like</h2>
+            <div id="randomMovies" class="movies-grid">
+            </div>
+        </div>
+
+        <div class="car-movies-section">
+            <h2>Car movie section</h2>
+            <div id="carMovies" class="movies-grid">
+            </div>
+        </div>
+
+        <div id="movie" class="movie-results"></div>
+
+</div>
+
+<div class="seperator"></div>
+
+<div class="bottom-header">
+
+</div>
+
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 
