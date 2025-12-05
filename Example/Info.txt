@@ -1,3 +1,8 @@
 
 Commiting files into git!---------------------
 git add . && git commit -m "update" && git push
+
+
+
+Remove previous owners - laragon-----------------------
+rundll32.exe keymgr.dll,KRShowKeyMgr
