@@ -573,25 +573,7 @@ align-items: left;
     margin-top: 0.5rem;
 }
 
-.subscribe-btn.large {
-    display: flex;
-    background: linear-gradient(135deg, orangered 0%, orangered 100%);;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    align-items: center;
-    gap: 10px;
-    font-size: 1rem;
-}
 
-.subscribe-btn.large:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px orangered;
-}
 
 .footer-links-grid {
     display: grid;
@@ -676,3 +658,21 @@ align-items: left;
     flex-wrap: wrap;
     gap: 1rem;
 }
+
+.footer-legal {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-legal a {
+    color: #A3A3A3;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: orangered;
+}
+
